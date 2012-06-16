@@ -49,9 +49,9 @@ public class InPitch
 
 	public static void main(String[] args)
 	{
-		WaveBank set = new WaveBank();
+		WaveBank waveBank = new WaveBank();
 		SoundTrainer trainer = new SoundTrainer();
-		//        set.load("test.set"); 
+		//        waveBank.load("test.set"); 
 		//
 		InPitchMain inPitchMain = new InPitchMain(trainer);
 

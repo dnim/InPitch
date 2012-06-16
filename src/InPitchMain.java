@@ -438,9 +438,19 @@ public class InPitchMain extends  JFrame
         		switchOrdering(3);
         	}
         });
+        
+        JMenuItem ordering4 = new JMenuItem("Eb, F#, ...");
+        ordering4.addActionListener(new ActionListener()
+        {
+        	public void actionPerformed(ActionEvent e)
+        	{
+        		switchOrdering(4);
+        	}
+        });
         orderingMenu.add(ordering1);
         orderingMenu.add(ordering2);
         orderingMenu.add(ordering3);
+        orderingMenu.add(ordering4);
         menuBar.add(orderingMenu);
         
         // Level menu

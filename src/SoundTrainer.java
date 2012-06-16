@@ -33,8 +33,9 @@ public class SoundTrainer
 	public String ordering1[] = {"A", "E", "C", "F# | Gb", "D", "B", "F", "G", "D# | Eb", "A# | Bb", "C# | Db", "G# | Ab"};
 	public String ordering2[] = {"F", "G", "D# | Eb", "A# | Bb", "C# | Db", "G# | Ab", "E", "A", "C", "F# | Gb", "D", "B"};
 	public String ordering3[] = {"C", "C# | Db", "D", "D# | Eb", "E", "F", "F# | Gb", "G", "G# | Ab", "A", "A# | Bb", "B"};
+	public String ordering4[] = {"D# | Eb", "F# | Gb"};
 
-	public String ordering[] = ordering1;
+	public String ordering[] = ordering4;
 	
 	// Returns a vector of Strings representing the notes that the
 	// program will test the student on.
@@ -58,7 +59,6 @@ public class SoundTrainer
 	{
 		if (newLevel > 11 || newLevel < 0)
 			throw new Exception("Invalid level");
-		
 		
 		notes = vecFromNotes(ordering, newLevel + 1);
 		level = newLevel - 1;
@@ -214,6 +214,8 @@ public class SoundTrainer
     		ordering = ordering2;
     	else if (newOrdering == 3)
     		ordering = ordering3;
+    	else if (newOrdering == 4)
+    		ordering = ordering4;
     	else
     		return;
 	}
